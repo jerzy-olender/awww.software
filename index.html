@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
@@ -31,7 +32,7 @@
                         Wordpress & Woocomerce Software House
                     </p>
                     <div class="buttons">
-                        <a href="#" class="button left">What we do?</a>
+                        <a href="#what-we-do" class="button left">What we do?</a>
                         <a href="#" class="button right">Watch team video</a>
                     </div>
                 </div>
@@ -59,7 +60,7 @@
         </div>
     </div>
     <div class="container">
-        <section class="what-we-do">
+        <section class="what-we-do" id="what-we-do">
             <div class="image">
                 <img src="assets/img/awww-illustration.png" />
             </div>
@@ -126,35 +127,53 @@
     </section>
     <footer class="awww-footer">
         <div class="container">
-            <h2 class="footer-heading">
-                Formularz kontaktowy
-            </h2>
             <div class="footer-wrapper">
                 <div class="footer-contact">
                     <p class="address">al. Pokoju 1 (XI piętro)<br />
                         31-548 Kraków</p>
-                    <p class="contact">tel.<span class="contact-phone">+48 504 020 682</span> <br />
-                        e-mail: <span class="email">join@awww.software</span></p>
+                    <p class="contact">tel. <a href="tel:+48504020682" class="contact-phone">+48 504 020 682</a> <br />
+                        e-mail: <a href="mailto:join@awww.software" class="email">join@awww.software</a></p>
                     <div class="social-icons">
-                        <span class="fa fa-facebook-f"></span>
-                        <span class="fa fa-youtube"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-instagram"></span>
+                        <a href="#"><span class="fa fa-facebook-f"></span></a>
+                        <a href="#"><span class="fa fa-youtube"></span></a>
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
                     </div>
                 </div>
                 <div class="footer-form">
+                    <h2 class="footer-heading">
+                        Formularz kontaktowy
+                    </h2>
                     <form class="form-contact">
-                        <input class="name" type="text">
-                        <input class="email" type="email">
-                        <input class="phone" type="phone">
-                        <input class="subject" type="text">
-                        <textarea class="form-text"></textarea>
+                        <div class="input-wrapper">
+                            <input class="input" type="text" id="name" required />
+                            <label for="name" class="label">Imię i nazwisko</label>
+                            
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="text" id="email" required />
+                            <label for="email" class="label">Adres e-mail</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="tel" id="phone" required>
+                            <label for="phone" class="label">Numer telefonu</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="text" id="subject" required>
+                            <label class="label" for="subject">Temat wiadomości</label>
+                        </div>
+                        <div class="input-wrapper message-content">
+                            <label for="message" class="label">Treść wiadomości</label>
+                            <textarea rows="8" class="input" id="message"></textarea>
+                        </div>
+                        <div class="button-wrapper">
+                            <button type="submit" class="submit">Wyślij wiadomość</button>
+                        </div>
                     </form>
                 </div>
-
             </div>
             <div class="footer-copyright">
+                © Copyright 2018 Infinity Power International. Wszelkie prawa zastrzeżone.
             </div>
         </div>
     </footer>

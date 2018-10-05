@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600&subset=latin-ext');
 
 html,
 body,
@@ -136,6 +137,8 @@ a {
     text-decoration: none;
 }
 
+body{overflow-x: hidden;}
+
 .container {
     width: 1280px;
     margin: 0 auto;
@@ -157,6 +160,7 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .awww-header .top-content .menu a {
@@ -186,6 +190,7 @@ a {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .awww-header .middle-content .paragraph {
@@ -215,6 +220,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 110px 0 130px 0;
+    flex-wrap: wrap;
 
 }
 
@@ -257,6 +263,7 @@ a {
     margin-bottom: 90px;
     margin-left: -35px;
     width: calc(100% + 70px);
+    flex-wrap: wrap;
 }
 
 .our-products .product {
@@ -267,7 +274,7 @@ a {
 }
 
 .our-products .product img {
-    width: 106px;
+    max-width: 106px;
 }
 
 .our-products .product .title {
@@ -313,6 +320,7 @@ a {
 .technology .technology-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .technology .technology-wrapper .text {
@@ -370,27 +378,257 @@ a {
 
 .awww-footer{
     background: url('../img/footer-background.jpg');
-}
-
-.awww-footer .footer-heading{
-    width: 50%;
-    margin-left: 50%;
+    padding: 75px 0;
 }
 
 .awww-footer .footer-wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    flex-wrap: wrap;
 }
 
 .awww-footer .footer-wrapper .footer-contact{
-    width: 25%;
+    width: 40%;
+}
+
+.awww-footer .footer-wrapper .footer-contact .address{
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.awww-footer .footer-wrapper .footer-contact .contact{
+    text-transform: uppercase;
+    line-height: 28px;
+    color: #fff;
+}
+
+.awww-footer .footer-wrapper .footer-contact .contact .contact-phone, .awww-footer .footer-wrapper .footer-contact .contact .email{
+    color: #7dbd6e;
+}
+
+.awww-footer .footer-wrapper .footer-contact .social-icons{
+    margin-top: 65px;
+}
+
+.awww-footer .footer-wrapper .footer-contact .social-icons a{
+    margin-right: 30px; 
+    color: #fff;
+    font-size: 20px;
+}
+
+.awww-footer .footer-wrapper .footer-contact .social-icons a:hover{
+    color: #7dbd6e;
 }
 
 .awww-footer .footer-wrapper .footer-form{
-    width: 50%;
+    width: 60%;
+}
+
+.awww-footer .footer-wrapper .footer-form .footer-heading{
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.awww-footer .footer-wrapper .footer-form .form-contact{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    
+}
+
+.awww-footer .footer-wrapper .footer-form .form-contact .input-wrapper{
+    width: 45%;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.awww-footer .footer-wrapper .footer-form .form-contact .input-wrapper.message-content{
+    width: 100%;
+}
+
+.awww-footer .footer-wrapper .footer-form .form-contact .input-wrapper.message-content .label{
+    position: static;
+}
+
+.label{
+    font-family: 'WorkSans', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s;
+    left: 0;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    outline: none !important;
+    color: #fff; 
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-family: 'WorkSans', sans-serif;
 }
 
 
-.awww-footer .footer-wrapper .footer-contact .social-icons span{
-    font-size: 20px;
+.input:focus + .label,
+.input:valid + .label {
+  top: -20px;
 }
+
+.awww-footer .footer-wrapper .footer-form .form-contact .button-wrapper{
+    width: 100%;
+    text-align: right;
+}
+
+.awww-footer .footer-wrapper .footer-form .form-contact .button-wrapper .submit{
+    font-family: 'WorkSans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #7dbd6e;
+    background-color: transparent;
+    border: 1px solid #7dbd6e;
+    text-transform: uppercase;
+    padding: 23px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.awww-footer .footer-copyright{
+    font-size: 12px;
+    color: #fff;
+    padding-left: 60px;
+    margin-top: 75px;
+    
+}
+
+@media(min-width: 768px) and (max-width: 1279px){
+    .container{
+        width: auto;
+        padding: 0 20px;
+    }
+    
+    .awww-header .top-content .menu{
+        margin-top: 10px;
+    }
+    
+    .awww-header .top-content .menu a:first-of-type{
+        margin-left: 0;
+    }
+    
+    .our-products{
+        margin-bottom: 20px;
+    }
+    
+    .our-products .product{
+        width: calc(50% - 70px);
+        margin-bottom: 70px;
+    }
+    
+    .awww-footer .footer-wrapper .footer-contact{
+        order: 2;
+        width: 100%;
+    }
+    
+    .awww-footer .footer-wrapper .footer-form{
+        order: 1;
+        width: 100%;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 767px){
+    .container{
+        width: auto;
+        padding: 0 20px;
+    }
+    
+    .awww-header .top-content .menu{
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .awww-header .top-content .menu a{
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .awww-header .middle-content .title{
+        font-size: 44px;
+    }
+    
+    .awww-header .middle-content .buttons .button.right{
+        margin-top: 10px; 
+    }
+    
+    .awww-header .bottom-content{
+        padding: 10px 0;
+    }
+    
+    .awww-header .bottom-content .content-img{
+        width: 50%;
+        text-align: center;
+    }
+    
+    .what-we-do .image{
+        width: 100%;
+    }
+    
+     .what-we-do .content{
+        width: 100%;
+    }
+    
+    .our-products{
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    
+    .our-products .product{
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .technology .technology-wrapper .text{
+        width: 100%;
+    }
+    
+    .technology .technology-wrapper .tiles{
+        width: 100%;
+    }
+    
+    .awww-footer .footer-wrapper{
+        padding: 0;
+    }
+    
+    .awww-footer .footer-wrapper .footer-contact{
+        order: 2;
+        width: 100%;
+    }
+    
+    .awww-footer .footer-wrapper .footer-form{
+        order: 1;
+        width: 100%;
+    }
+    
+    .awww-footer .footer-wrapper .footer-form .form-contact .button-wrapper{
+        text-align: left;
+        margin-bottom: 60px;
+    }
+    
+    .awww-footer .footer-copyright{
+        padding-left: 0;
+    }
+    
+}
+
+
