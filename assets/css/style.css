@@ -146,6 +146,7 @@ body{overflow-x: hidden;}
 
 .header-wrapper {
     background: url('../img/header-background.jpg');
+    background-size: cover;
 }
 
 .awww-header {
