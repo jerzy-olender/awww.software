@@ -144,27 +144,27 @@
                     <h2 class="footer-heading">
                         Formularz kontaktowy
                     </h2>
-                    <form class="form-contact" onkeyup="myfunction()">
+                    <form class="form-contact">
                         <div class="input-wrapper">
-                            <input class="input" type="text" id="name" required />
+                            <input class="input" onkeyup="checkName()" type="text" id="name" required />
                             <label for="name" class="label">Imię i nazwisko</label>
 
                         </div>
                         <div class="input-wrapper">
-                            <input class="input" type="text" id="email" required />
+                            <input class="input" onkeyup="checkEmail()" type="text" id="email" required />
                             <label for="email" class="label">Adres e-mail</label>
                         </div>
                         <div class="input-wrapper">
-                            <input class="input" type="tel" id="phone" required>
+                            <input class="input" onkeyup="checkPhone()" type="tel" id="phone" required>
                             <label for="phone" class="label">Numer telefonu</label>
                         </div>
                         <div class="input-wrapper">
-                            <input class="input" type="text" id="subject" required>
+                            <input class="input" onkeyup="checkSubject()" type="text" id="subject" required>
                             <label class="label" for="subject">Temat wiadomości</label>
                         </div>
                         <div class="input-wrapper message-content">
                             <label for="message" class="label">Treść wiadomości</label>
-                            <textarea rows="8" class="input" id="message"></textarea>
+                            <textarea onkeyup="checkMessage()" rows="8" class="input" id="message"></textarea>
                         </div>
                         <div class="button-wrapper">
                             <button type="submit" class="submit">Wyślij wiadomość</button>
