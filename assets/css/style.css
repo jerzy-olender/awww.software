@@ -137,7 +137,11 @@ a {
     text-decoration: none;
 }
 
-body{overflow-x: hidden;}
+html {
+    scroll-behavior: smooth;}
+
+body {
+    overflow-x: hidden;}
 
 .container {
     width: 1280px;
